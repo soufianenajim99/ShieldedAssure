@@ -1,0 +1,20 @@
+{
+  "name": "shieldedassure",
+  "version": "1.0.0",
+  "description": "Application de Gestion d'Assurance avec Routage MVC",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/style.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^4.4.23",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "flowbite": "^2.2.1"
+  }
+}
