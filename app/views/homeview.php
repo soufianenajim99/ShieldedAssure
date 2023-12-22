@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/style.css" />
-    <title>E-bank-V2</title>
+    <title>Shielded-Assure</title>
 </head>
 
 <body>
-    <header>
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
+    <header class="bg-gray-500/50">
+        <div class=" navbar ">
+            <div class=" navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -27,7 +27,7 @@
                         <li><a>ABOUT US</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl">E-Bank</a>
+                <a class="btn btn-ghost text-xl">Shielded-Assure</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 font-bold">
@@ -37,18 +37,18 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn" href="app/views/login.php">LOGIN</a>
+                <a class="btn" href="app/views/loginPage.php">LOGIN</a>
             </div>
         </div>
     </header>
     <section>
         <div class="hero min-h-screen" style="
-          background-image: url(public/img/132242647-banking-theme-cartoon-bank-building-with-dollars-and-coin-stack-isolated-over-white-background.jpg);
+          background-image: url(public/img/desktop-wallpaper-qa-best-practices-to-deliver-stable-software-quality-assurance.jpg);
         ">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
                 <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">E-Bank Bank of Tomorrow</h1>
+                    <h1 class="mb-5 text-5xl font-bold">Shielded-Assure Assurence of Tomorrow</h1>
                     <p class="mb-5">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
                         excepturi exercitationem quasi. In deleniti eaque aut repudiandae
