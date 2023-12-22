@@ -1,10 +1,14 @@
+<?php
+// require_once "../app/views/homeview.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-theme="cupcak">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../dist/style.css" />
+    <link rel="stylesheet" href="../dist/style.css" />
     <title>Shielded-Assure</title>
 </head>
 
@@ -37,13 +41,13 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn" href="loginPage.php">LOGIN</a>
+                <a class="btn" href="app/views/loginPage.php">LOGIN</a>
             </div>
         </div>
     </header>
     <section>
         <div class="hero min-h-screen" style="
-          background-image: url(../../public/img/desktop-wallpaper-qa-best-practices-to-deliver-stable-software-quality-assurance.jpg);
+          background-image: url(img/desktop-wallpaper-qa-best-practices-to-deliver-stable-software-quality-assurance.jpg);
         ">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
