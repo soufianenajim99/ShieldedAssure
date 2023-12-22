@@ -1,7 +1,7 @@
 {
-  "name": "shieldedassure",
+  "name": "e-banking-mvc",
   "version": "1.0.0",
-  "description": "Application de Gestion d'Assurance avec Routage MVC",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/style.css",
