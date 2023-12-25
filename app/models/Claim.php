@@ -4,11 +4,17 @@ class Claim {
 private $ID_Claim;
 private $Description;
 private $Date;
-
 private $MontantPrim;
 private $DatePrim;
-private Article $ID_Article;
-public function __construct(){
+private $ID_Article;
+
+public function __construct($ID_Claim, $Description, $Date, $MontantPrim, $DatePrim, $ID_Article) {
+    $this->ID_Claim = $ID_Claim;
+    $this->Description = $Description;
+    $this->Date = $Date;
+    $this->MontantPrim = $MontantPrim;
+    $this->DatePrim = $DatePrim;
+    $this->ID_Article = $ID_Article;
 }
 
 public function __get($property) {
