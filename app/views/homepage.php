@@ -2,12 +2,13 @@
 $rootFolder = __DIR__;
 // echo $rootFolder;
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-// echo "Document Root: " . $documentRoot.'<br>'; $cssFilePath =
+// http://localhost/shieldedAssure/views/test.html
+
 $_SERVER['DOCUMENT_ROOT'] . '/ShieldedAssure/dist/style.css'; $imgFilePath =
 $_SERVER['DOCUMENT_ROOT'] .
 '/ShieldedAssure/public/img/desktop-wallpaper-qa-best-practices-to-deliver-stable-software-quality-assurance.jpg';
 // echo "Document Root: " . $cssFilePath.'<br />'; // echo "Document Root: " .
-$imgFilePath; ?>
+// $imgFilePath; ?>
 
 <!DOCTYPE html>
 <html lang="en" data-theme="cupcak">
@@ -15,7 +16,7 @@ $imgFilePath; ?>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/style.css" />
+    <link rel="stylesheet" href="http://localhost/shieldedAssure/public/dist/style.css" />
     <title>Shielded-Assure</title>
 </head>
 
@@ -54,7 +55,7 @@ $imgFilePath; ?>
     </header>
     <section>
         <div class="hero min-h-screen" style="
-          background-image: url(img/desktop-wallpaper-qa-best-practices-to-deliver-stable-software-quality-assurance.jpg);
+          background-image: url(http://localhost/shieldedAssure/public/img/desktop-wallpaper-qa-best-practices-to-deliver-stable-software-quality-assurance.jpg);
         ">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">

@@ -3,4 +3,6 @@
 require_once "../app/bootstrap.php";
 
 
+$demo = new Core;
+
 ?>
