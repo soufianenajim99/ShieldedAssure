@@ -7,7 +7,7 @@ class Core{
 
     public function __construct(){
 
-       print_r($this->get_url());
+    //    print_r($this->get_url());
     $url = $this->get_url();
     
     if(file_exists('../app/controllers/'. ucwords($url[0]) .'.php')){
@@ -18,8 +18,18 @@ class Core{
     require_once "../app/controllers/". $this->curCont .".php";
     $this->curCont = new $this->curCont;
 
-    
+    if(isset($url[1])){
+        // Check to see if method exists in controller
+        if(method_exists($this->curCont, $url[1])){
+          $this->curmet = $url[1];
+          // Unset 1 index
+          unset($url[1]);
+        }
+      }
 
+      $this->params = $url ? array_values($url) : [];
+
+      call_user_func_array([$this->curCont, $this->curmet], $this->params);
 
 }
 
