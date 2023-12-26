@@ -49,7 +49,7 @@ $_SERVER['DOCUMENT_ROOT'] .
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn" href="login.html">LOGIN</a>
+                <a class="btn" href="login">LOGIN</a>
             </div>
         </div>
     </header>
