@@ -7,13 +7,12 @@ class Defcon extends Controller{
 
     }
     public function index(){
-
-        echo"hello";
+      $this->view('homepage');
+        // echo"hello";
 
     }
-    public function about(){
-        echo "about_page";
-        
+    public function login(){
+      $this->view('loginPage',['title'=> 'LoginPageT']);
     }
 
 
