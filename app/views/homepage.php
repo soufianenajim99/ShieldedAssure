@@ -21,6 +21,17 @@ $_SERVER['DOCUMENT_ROOT'] .
 </head>
 
 <body>
+
+
+    <div class="avatar">
+        <div class="w-10 rounded">
+            <img
+                src="public/img/desktop-wallpaper-qa-best-practices-to-deliver-stable-software-quality-assurance.jpg" />
+        </div>
+    </div>
+
+
+
     <header class="bg-gray-500/50 fixed w-full">
         <div class="navbar">
             <div class="navbar-start">
