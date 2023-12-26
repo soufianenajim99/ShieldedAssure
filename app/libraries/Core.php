@@ -7,7 +7,7 @@ class Core{
 
     public function __construct(){
 
-    //    print_r($this->get_url());
+       print_r($this->get_url());
     $url = $this->get_url();
     
     if(file_exists('../app/controllers/'. ucwords($url[0]) .'.php')){
