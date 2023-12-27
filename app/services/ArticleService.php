@@ -3,9 +3,13 @@
 
 
 class ArticleService implements ImArticleService {
+    private $db ;
+
+    public function __construct(Database $db){
+        $this->db = $db;
+    }
 
     public function addArticle(Article $article) {
-     $db=$this->connect();
      if ($db == null) {
         return null;
     }
@@ -36,6 +40,7 @@ class ArticleService implements ImArticleService {
     }
 
     public function displayArticle(){
+
         $db_connection = $this->connect();
             if ($db_connection == null) {
                 return null;

@@ -8,12 +8,12 @@ require_once "../app/views/inc/header.php"
         <!-- head -->
         <thead>
             <tr>
-                <th></th>
-                <th>Assureurs</th>
-                <th>Clients</th>
-                <th>Claims</th>
-                <th>Articles</th>
-                <th>Actions</th>
+                <th>ID</th>
+                <th><i class="fa-solid fa-shield-halved"></i> Assureurs</th>
+                <th><i class="fa-solid fa-user-secret"></i> Clients</th>
+                <th><i class="fa-solid fa-circle-exclamation"></i> Claims</th>
+                <th><i class="fa-solid fa-newspaper"></i> Articles</th>
+                <th><i class="fa-solid fa-gears"></i> Actions</th>
             </tr>
         </thead>
         <tbody>

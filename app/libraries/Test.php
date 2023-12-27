@@ -1,6 +1,6 @@
 <?php
 
-echo "test page".'<br>';
+// echo "test page".'<br>';
 
 class Test{
 
