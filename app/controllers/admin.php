@@ -4,9 +4,9 @@ class admin extends Controller {
 
      private $AssureurService;
 
-    public function __construct() {
-
-        $this->AssureurService = new AssureurService();
+     public function __construct() {
+        $db = new Database();
+        $this->AssureurService = new AssureurService($db);
     }
     public function home() {
         
