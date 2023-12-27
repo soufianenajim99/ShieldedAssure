@@ -79,8 +79,9 @@ require_once "../app/views/inc/header.php"
                 <td><?= $assur->Adresse ?></td>
                 <td><a href="" class="p-2"><i class="fa-solid fa-trash"></i></a>
                     <button onclick="my_modal_2.showModal()">
-                        <a href=""></a>
-                        <i class="fa-solid fa-pen-to-square"></i>
+                        <a href="assureur/editAssurence/<?= $assur->ID_Assureur ?>"> <i
+                                class="fa-solid fa-pen-to-square"></i></a>
+
                     </button>
                 </td>
             </tr>

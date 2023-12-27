@@ -32,7 +32,7 @@ class AssureurService extends Database implements ImAssureurService {
     }
     function updateAssureur(Assureur $assureur){
         $db = $this->connectDatabase();
-        $sql='INSERT INTO assureur (Nom,Adresse) VALUES(:Nom, :Adresse)';
+        // $sql='INSERT INTO assureur (Nom,Adresse) VALUES(:Nom, :Adresse)';
         $sql='UPDATE assureur SET Nom = :Nom, Adresse = :Adresse WHERE ID_Assureur = :ID_Assureur';
         $stmt = $db->prepare($sql);
         try{

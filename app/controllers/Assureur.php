@@ -39,13 +39,14 @@ class Assureur extends Controller {
              
             }
 
-    public function editAssurence() {
+    public function editAssurence($id) {
     $db = new Database();
     $this->AssureurService = new AssureurService($db);
     if($_SERVER["REQUEST_METHOD"] == "POST" ){
         $Nom = $_POST["Nom"];
         $Adresse = $_POST["Adresse"];
                    $newAssureur = new Assureur();
+                   $newAssureur->ID_Assureur= $id;
                    $newAssureur->Nom = $Nom;
                    $newAssureur->Adresse = $Adresse;
                    try{
