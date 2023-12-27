@@ -28,6 +28,7 @@ require_once "../app/views/inc/header.php"
                 <td>Cy Ganderton</td>
                 <td>Quality Control Specialist</td>
                 <td>Blue</td>
+                <td><i class="fa-solid fa-trash"></i></td>
             </tr>
             <!-- row 2 -->
             <tr>

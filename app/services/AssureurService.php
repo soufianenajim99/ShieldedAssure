@@ -15,17 +15,40 @@ class AssureurService extends Database implements ImAssureurService {
     }
     function addAssureur(Assureur $assureur){
         $db = $this->connectDatabase();
-        $sql='INSERT INTO bank (Nom,Adresse) VALUES(:Nom, :Adresse)';
+        $sql='INSERT INTO assureur (Nom,Adresse) VALUES(:Nom, :Adresse)';
         $stmt = $db->prepare($sql);
-        $stmt->execute([
-            ":Nom" => $assureur->Nom,
-            ":Adresse" => $assureur->Adresse,
-           ]);
+        try{
+            $stmt->execute([
+                ":Nom" => $assureur->Nom,
+                ":Adresse" => $assureur->Adresse,
+               ]);
+           }
+           catch(PDOException $e){
+              die($e->getMessage());
+           }
+       
         $db=null;
         $stmt=null;
     }
     function updateAssureur(Assureur $assureur){
         $db = $this->connectDatabase();
+        $sql='INSERT INTO assureur (Nom,Adresse) VALUES(:Nom, :Adresse)';
+        $sql='UPDATE assureur SET Nom = :Nom, Adresse = :Adresse WHERE ID_Assureur = :ID_Assureur';
+        $stmt = $db->prepare($sql);
+        try{
+            $stmt->execute([
+                ":Nom" => $assureur->Nom,
+                ":Adresse" => $assureur->Adresse,
+                ":ID_Assureur" => $assureur->ID_Assureur,
+               ]);
+           }
+           catch(PDOException $e){
+              die($e->getMessage());
+           }
+       
+        $db=null;
+        $stmt=null;
+
         
     }
     function deleteAssureur($assureurId){

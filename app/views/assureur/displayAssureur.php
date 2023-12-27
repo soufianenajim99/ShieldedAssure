@@ -13,16 +13,18 @@ require_once "../app/views/inc/header.php"
         </button>
     </div>
 
-
+    <!-- _______________add_form____________ -->
     <div class="popform">
         <dialog id="my_modal_1" class="modal w-2/5 ml-104 rounded-2xl bg-gray-200 text-center py-12">
             <div class="modal-box">
                 <h1 class="text-3xl font-bold mb-12">Ajouter un Assureur</h1>
-                <form class="flex  flex-col justify-center items-center gap-4" action="" method="post">
+                <form class="flex  flex-col justify-center items-center gap-4" action="addassurence" method="post">
                     <label for="">Nom D'Assureur</label>
-                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                        name="Nom" />
                     <label for="">Adresse D'Assureur</label>
-                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                        name="Adresse" />
                     <button class="btn btn-wide" type="submit">Submit</button>
                 </form>
             </div>
@@ -30,10 +32,26 @@ require_once "../app/views/inc/header.php"
 
     </div>
 
+    <!-- _______________update_form____________ -->
 
 
+    <div class="popform">
+        <dialog id="my_modal_2" class="modal w-2/5 ml-104 rounded-2xl bg-gray-200 text-center py-12">
+            <div class="modal-box">
+                <h1 class="text-3xl font-bold mb-12">Editer un Assureur</h1>
+                <form class="flex  flex-col justify-center items-center gap-4" action="addassurence" method="post">
+                    <label for="">Nouveau Nom D'Assureur</label>
+                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                        name="Nom" />
+                    <label for="">Nouvelle Adresse D'Assureur</label>
+                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                        name="Adresse" />
+                    <button class="btn btn-wide" type="submit">Submit</button>
+                </form>
+            </div>
+        </dialog>
 
-
+    </div>
 
 
 
@@ -47,6 +65,8 @@ require_once "../app/views/inc/header.php"
                 <th><i class="fa-solid fa-shield-halved"></i> ID_Assureur</th>
                 <th><i class="fa-solid fa-user-secret"></i> Nom_Assureur</th>
                 <th><i class="fa-solid fa-circle-exclamation"></i> Adresse</th>
+                <th><i class="fa-solid fa-gears"></i> Actions</th>
+
             </tr>
         </thead>
         <tbody>
@@ -57,6 +77,11 @@ require_once "../app/views/inc/header.php"
                 <th><?= $assur->ID_Assureur ?></th>
                 <td><?= $assur->Nom ?></td>
                 <td><?= $assur->Adresse ?></td>
+                <td><a href="" class="p-2"><i class="fa-solid fa-trash"></i></a>
+                    <button onclick="my_modal_2.showModal()">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                </td>
             </tr>
             <?php
             }

@@ -13,7 +13,7 @@ class admin extends Controller {
             $assureurs = $this->AssureurService->displayAssureur();
             // Data Transfer To view;
             $data = [
-                'banks' => $assureurs,
+                'assurs' => $assureurs,
                 'page' => 'shield'
             ];
             
