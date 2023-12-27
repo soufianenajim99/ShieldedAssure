@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
     <link rel="stylesheet" href="http://localhost/shieldedAssure/public/dist/style.css" />
+    <link rel="stylesheet"
+        href="http://localhost/shieldedAssure/public/fontawesome-free-6.5.1-web/css/fontawesome.min.css" />
     <title><?= SITENAME ?></title>
 </head>
 
-<body class="h-full relative">
+<body class="h-screen relative">
     <header>
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -75,7 +78,7 @@
     </header>
 
     <aside
-        class="absolute flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto  border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+        class="absolute top-0 left-0 flex flex-col w-1/5 h-screen px-4 py-8 overflow-y-auto  border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
 
 
         <div class="relative mt-6">
@@ -115,7 +118,7 @@
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
 
-                    <span class="mx-4 font-medium">Accounts</span>
+                    <span class="mx-4 font-medium">Assureurs</span>
                 </a>
 
                 <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
@@ -126,7 +129,7 @@
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
 
-                    <span class="mx-4 font-medium">Tickets</span>
+                    <span class="mx-4 font-medium">Clients</span>
                 </a>
 
                 <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
@@ -140,10 +143,9 @@
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
 
-                    <span class="mx-4 font-medium">Settings</span>
+                    <span class="mx-4 font-medium">Claims</span>
                 </a>
 
-                <hr class="my-6 border-gray-200 dark:border-gray-600" />
 
                 <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                     href="#">
@@ -153,9 +155,10 @@
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
 
-                    <span class="mx-4 font-medium">Tickets</span>
+                    <span class="mx-4 font-medium">Articles</span>
                 </a>
 
+                <hr class="my-6 border-gray-200 dark:border-gray-600" />
                 <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-md dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                     href="#">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

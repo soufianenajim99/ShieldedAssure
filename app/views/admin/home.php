@@ -3,15 +3,17 @@
 require_once "../app/views/inc/header.php"
 ?>
 <!-- <h1>welcome</h1> -->
-<div class="overflow-x-auto float-right">
+<div class="overflow-x-auto w-4/5 float-right flex items-start   h-screen p-10">
     <table class="table">
         <!-- head -->
         <thead>
             <tr>
                 <th></th>
-                <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
+                <th>Assureurs</th>
+                <th>Clients</th>
+                <th>Claims</th>
+                <th>Articles</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
