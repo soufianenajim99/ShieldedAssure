@@ -38,4 +38,24 @@ class Assureur extends Controller {
                 }
              
             }
+
+    public function editAssurence() {
+    $db = new Database();
+    $this->AssureurService = new AssureurService($db);
+    if($_SERVER["REQUEST_METHOD"] == "POST" ){
+        $Nom = $_POST["Nom"];
+        $Adresse = $_POST["Adresse"];
+                   $newAssureur = new Assureur();
+                   $newAssureur->Nom = $Nom;
+                   $newAssureur->Adresse = $Adresse;
+                   try{
+                    $this->AssureurService->updateAssureur( $newAssureur );
+                    header("Location:".URLROOT."assureur/displayAssureur");
+                   }
+                   catch(PDOException $e){
+                    die($e->getMessage());
+                   }
+                }
+
+    }
 }
