@@ -12,6 +12,10 @@ spl_autoload_register(function ($class) {
     require "libraries/".$class.".php";
 });
 
+// $ho = new Test();
+
+// var_dump($ho);
+
 
 
 

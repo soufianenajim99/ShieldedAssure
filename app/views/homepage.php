@@ -23,12 +23,6 @@ $_SERVER['DOCUMENT_ROOT'] .
 <body>
 
 
-    <div class="avatar">
-        <div class="w-10 rounded">
-            <img
-                src="public/img/desktop-wallpaper-qa-best-practices-to-deliver-stable-software-quality-assurance.jpg" />
-        </div>
-    </div>
 
 
 

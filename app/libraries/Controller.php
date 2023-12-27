@@ -3,6 +3,8 @@
    * Base Controller
    * Loads the models and views
    */
+
+   echo"controller page".'<br>';
   class Controller {
     // Load model
     public function model($model){

@@ -1,5 +1,5 @@
 <?php 
- 
+ echo "were in Database Library";
     class Database {
       
         private $host = DB_HOST;

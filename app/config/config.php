@@ -1,5 +1,11 @@
 <?php
 
+const CONFIG = [
+    'db'=>'mysql:host=localhost;dbname=shielde',
+    'db_user' => 'root',
+    'db_password' => ''
+];
+
 //app root
 define('APPROOT',dirname(dirname(__FILE__))) ;
 
