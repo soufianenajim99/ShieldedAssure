@@ -1,5 +1,5 @@
 <?php
- echo "Core Library".'<br>';
+//  echo "Core Library".'<br>';
 
 class Core{
     protected $curCont="defcon";

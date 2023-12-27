@@ -1,6 +1,6 @@
 <?php
 
-class admin extends Controller {
+class Assureur extends Controller {
 
      private $AssureurService;
 
@@ -8,18 +8,15 @@ class admin extends Controller {
 
         $this->AssureurService = new AssureurService();
     }
-    public function home() {
+    public function displayAssureur() {
         
             $assureurs = $this->AssureurService->displayAssureur();
             // Data Transfer To view;
             $data = [
-                'banks' => $assureurs,
+                'assurs' => $assureurs,
                 'page' => 'shield'
             ];
             
-            $this->view('admin/home' , $data );
+            $this->view('assureur/displayAssureur' , $data );
         
-
-
-     $this->view("admin/home");
     }}

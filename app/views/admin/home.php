@@ -2,8 +2,13 @@
 // echo"where in admin";
 require_once "../app/views/inc/header.php"
 ?>
+
+
 <!-- <h1>welcome</h1> -->
 <div class="overflow-x-auto w-4/5 float-right flex items-start   h-screen p-10">
+    <?php
+    // print_r($data['banks']);
+    ?>
     <table class="table">
         <!-- head -->
         <thead>

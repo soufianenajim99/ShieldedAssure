@@ -7,8 +7,8 @@
    * Return rows and results
    */
 
-   echo"The shielde Database".'<br>';
-   echo CONFIG['db'].'<br>';
+  //  echo"The shielde Database".'<br>';
+  //  echo CONFIG['db'].'<br>';
    class Database {
      private $dbname = CONFIG['db'];
     private $user = CONFIG['db_user'];
