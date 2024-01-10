@@ -30,16 +30,15 @@ class AssureurService extends Database implements ImAssureurService {
         $db=null;
         $stmt=null;
     }
-    function updateAssureur(Assureur $assureur){
+    function updateAssureur(Assureur $assureur, $id){
         $db = $this->connectDatabase();
-        // $sql='INSERT INTO assureur (Nom,Adresse) VALUES(:Nom, :Adresse)';
         $sql='UPDATE assureur SET Nom = :Nom, Adresse = :Adresse WHERE ID_Assureur = :ID_Assureur';
         $stmt = $db->prepare($sql);
         try{
             $stmt->execute([
                 ":Nom" => $assureur->Nom,
                 ":Adresse" => $assureur->Adresse,
-                ":ID_Assureur" => $assureur->ID_Assureur,
+                ":ID_Assureur" => $id,
                ]);
            }
            catch(PDOException $e){
@@ -53,7 +52,15 @@ class AssureurService extends Database implements ImAssureurService {
     }
     function deleteAssureur($assureurId){
         $db = $this->connectDatabase();
-
+        $sql= "DELETE FROM assureur WHERE ID_Assureur = :ID_Assureur";
+        $stmt = $db->prepare($sql);
+        try{
+            $stmt->execute([
+                ":ID_Assureur"=> $assureurId,
+            ]);
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }
         
     }
 

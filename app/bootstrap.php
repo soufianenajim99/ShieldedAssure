@@ -28,7 +28,7 @@ function Autoloader($class) {
 spl_autoload_register('Autoloader');
 
 
-$init = new Core();
+// $init = new Core();
 
 // var_dump($ho);
 

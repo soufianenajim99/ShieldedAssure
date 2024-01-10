@@ -34,7 +34,7 @@ require_once "../app/views/inc/header.php"
 
     <!-- _______________update_form____________ -->
 
-
+    <!-- 
     <div class="popform">
         <dialog id="my_modal_2" class="modal w-2/5 ml-104 rounded-2xl bg-gray-200 text-center py-12">
             <div class="modal-box">
@@ -51,7 +51,7 @@ require_once "../app/views/inc/header.php"
             </div>
         </dialog>
 
-    </div>
+    </div> -->
 
 
 
@@ -77,9 +77,10 @@ require_once "../app/views/inc/header.php"
                 <th><?= $assur->ID_Assureur ?></th>
                 <td><?= $assur->Nom ?></td>
                 <td><?= $assur->Adresse ?></td>
-                <td><a href="" class="p-2"><i class="fa-solid fa-trash"></i></a>
-                    <button onclick="my_modal_2.showModal()">
-                        <a href="assureur/editAssurence/<?= $assur->ID_Assureur ?>"> <i
+                <td><a href="deleteAssureur/<?= $assur->ID_Assureur ?>" class="p-2"><i
+                            class="fa-solid fa-trash"></i></a>
+                    <button>
+                        <a href="editAssurence/<?= $assur->ID_Assureur ?>"> <i
                                 class="fa-solid fa-pen-to-square"></i></a>
 
                     </button>

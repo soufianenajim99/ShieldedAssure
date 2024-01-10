@@ -2,133 +2,74 @@
 
 
 
-class ArticleService implements ImArticleService {
-    private $db ;
-
-    public function __construct(Database $db){
-        $this->db = $db;
+class ArticleService extends Database implements ImArticleService {
+    private $db;
+    public function __construct(Database $db) {
+    $this->db = $db;
     }
-
-    public function addArticle(Article $article) {
-     if ($db == null) {
-        return null;
+    function displayArticle(){
+    $db = $this->connectDatabase();
+    $query=$db->query('SELECT * FROM article');
+    $data_assureur=$query->fetchAll(PDO::FETCH_OBJ);
+    return $data_assureur;
     }
-    $articleId = $article->ArticleId;
-    $balance = $Article->balance;
-    $RIB = $Article->RIB;
-    $userId = $Article->userId;
-
-    $sql = "INSERT INTO Article (ArticleId ,balance , RIB , userID)
-    VALUES (:ArticleId ,:balance , :rib , :userID)
-    ";
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam(':ArticleId' ,$ArticleId,PDO::PARAM_STR);
-    $stmt->bindParam(':balance' ,$balance,PDO::PARAM_STR);
-    $stmt->bindParam(':rib' ,$RIB,PDO::PARAM_STR);
-    $stmt->bindParam(':userID' ,$userId,PDO::PARAM_STR);
-
-   try{
-     $stmt->execute();
+    function addArticle(Article $article){
+        $db = $this->connectDatabase();
+        $sql='INSERT INTO article (`Titre`, `Contenu`, `Date`, `ID_Assureur`, `ID_Client`) VALUES(:Titre, :Contenu, :Date, :ID_Assureur, :ID_Client)';
+        $stmt = $db->prepare($sql);
+        try{
+            $stmt->execute([
+                ":Titre"=>$article->Titre,
+                ":Contenu"=>$article->Contenu,
+                ":Date"=>$article->Date,
+                ":ID_Assureur"=>$article->ID_Assureur,
+                ":ID_Client"=>$article->ID_Client
+               ]);
+           }
+           catch(PDOException $e){
+              die($e->getMessage());
+           }
+       
+        $db=null;
+        $stmt=null;
     }
-    catch(PDOException $e){
-   die("invalid query" . $e->getMessage());
-   }
+    function updateArticle(Article $article, $id){
+        $db = $this->connectDatabase();
+        $sql='UPDATE article SET `Titre`= :Titre,`Contenu`= :Contenu ,`Date`=:Date,`ID_Assureur`= :ID_Assureur,`ID_Client`= :ID_Client WHERE ID_Article = :ID_Article';
+        $stmt = $db->prepare($sql);
+        try{
+            $stmt->execute([
+                ":Titre"=>$article->Titre,
+                ":Contenu"=>$article->Contenu,
+                ":Date"=>$article->Date,
+                ":ID_Assureur"=>$article->ID_Assureur,
+                ":ID_Client"=>$article->ID_Client,
+                ":ID_Article" => $id,
+               ]);
+           }
+           catch(PDOException $e){
+              die($e->getMessage());
+           }
+       
+        $db=null;
+        $stmt=null;
 
-   $db = null;
-   $stmt = null;
-
+        
     }
-
-    public function displayArticle(){
-
-        $db_connection = $this->connect();
-            if ($db_connection == null) {
-                return null;
-            }
-            $sql = "SELECT * FROM Article";
-
-            $stmt = $db_connection->query($sql);
-
-            $Articles = $stmt->fetchAll(PDO::FETCH_OBJ);
-            
-            $db_connection = null;
-            $stmt = null;
-
-            return $Articles;
-
-
-    }
-
-    public function updateArticle(Article $Article) {
-        $db_connection = $this->connect();
-        if ($db_connection == null) {
-            return null;
+    function deleteArticle($articleId){
+        $db = $this->connectDatabase();
+        $sql= "DELETE FROM article WHERE ID_Article = :ID_Article";
+        $stmt = $db->prepare($sql);
+        try{
+            $stmt->execute([
+                ":ID_Article"=> $articleId,
+            ]);
+        }catch(PDOException $e){
+            echo $e->getMessage();
         }
         
-        $ArticleId = $Article->ArticleId;
-        $balance = $Article->balance;
-        $RIB = $Article->RIB;
-        $userId = $Article->userId;
-
-        $sql = "UPDATE Article SET balance = :balance , RIB = :rib WHERE ArticleId = :ArticleID";
-
-        $stmt = $db_connection->prepare($sql);
-
-
-        $stmt->execute([
-            ":balance"=> $balance,
-            ":rib"=> $RIB,
-            ":ArticleId"=> $ArticleId,
-
-        ]);
-
-        $db_connection = null;
-        $stmt = null;
-
-    }
-
-    public function deleteArticle($ArticleID) {
-
-        $db_connection = $this->connect();
-
-        if ($db_connection == null) {
-            return null;
-        }
-
-        $sql = "DELETE FROM Article WHERE ArticleId = :ArticleID";
-
-        $stmt = $db_connection->prepare($sql);
-
-        $stmt->execute([
-            ":ArticleID"=> $ArticleID,
-        ]);
-
-        $db_connection = null;
-        $stmt = null;
-
     }
 
 
-
-
-
-
-
-
-
-
-
-
     
-
-
-    
-
 }
-
-
-
-
-
-
-?>
